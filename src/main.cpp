@@ -34,9 +34,7 @@ void setup() {
 void loop() {
   if (Firebase.getString(firebaseData, "/power")) {
 
-    //if (firebaseData.dataType() == "string"){
-      Serial.println(firebaseData.stringData());
-    //}
+    Serial.println(firebaseData.stringData());
 
   } else {
     Serial.println(firebaseData.errorReason());
